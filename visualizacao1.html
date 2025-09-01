@@ -102,10 +102,19 @@ option = {
       symbolSize: 30,
       itemStyle: {
         color: '#007bff'   
-      },         
+      },   
+        
       data: [
-        { type: 'max', name: 'Máximo' },
-        { type: 'min', name: 'Mínimo' }
+        { type: 'max', name: 'Máximo', label: {
+        color: 'black',          
+        formatter: '{b}\n{c} mm',
+        offset: [0, -20]
+      }},
+        { type: 'min', name: 'Mínimo', label: {
+        color: 'black',        
+        formatter: '{b}\n{c} mm',
+        offset: [0, -20]
+      }}
       ],
       label: {
         formatter: '{b}\n{c} mm'
