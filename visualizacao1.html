@@ -52,16 +52,7 @@ const valueList = data.map(function (item) {
   return item[1];
 });
 option = {
-  // Make gradient line here
-  visualMap: [
-    {
-      show: false,
-      type: 'continuous',
-      seriesIndex: 0,
-      min: 0,
-      max: 400
-    }
-  ],
+  
   title: [
     {
       left: 'center',
@@ -108,7 +99,10 @@ option = {
       },
       markPoint: {
       symbol: 'pin',     
-      symbolSize: 30,       
+      symbolSize: 30,
+      itemStyle: {
+        color: '#007bff'   
+      },         
       data: [
         { type: 'max', name: 'Máximo' },
         { type: 'min', name: 'Mínimo' }
