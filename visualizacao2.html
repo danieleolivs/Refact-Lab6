@@ -129,7 +129,28 @@ option = {
         { value: -473, label: labelRight, itemStyle: { color: '#ff7f0e' } },
         { value: -87.4, label: labelRight, itemStyle: { color: '#ff7f0e' } },
         {value: 410.9, itemStyle: { color: '#1f77b4' }}
-      ]
+      ],
+      markArea: {
+  itemStyle: {
+    color: 'rgba(255, 215, 0, 0.2)' 
+  },
+  label: {
+    show: true,
+    position: 'right', 
+    color: '#333',
+    fontWeight: 'bold',
+    
+    align: 'left', 
+    verticalAlign: 'middle'
+  },
+  data: [
+    [
+      { yAxis: '2022' },
+      { yAxis: '2023' }
+    ]
+  ]
+}
+  
     }
   ]
 };
