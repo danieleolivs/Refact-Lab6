@@ -60,8 +60,15 @@ option = {
     trigger: 'axis',
     axisPointer: {
       type: 'shadow'
-    }
+    },
+    formatter: function (params) {
+    
+    var item = params[0];
+    return item.seriesName + '<br/>' + item.name + ': ' + Math.abs(item.value) + ' mm';
+  }
+    
   },
+  
   grid: {
     top: 80,
     bottom: 30
@@ -103,7 +110,7 @@ option = {
   },
   series: [
     {
-      name: 'Cost',
+      name: 'Variação (mm)',
       type: 'bar',
       stack: 'Total',
       label: {
@@ -111,17 +118,17 @@ option = {
         formatter: '{b}'
       },
       data: [
-        { value: -17.9, label: labelRight },
-        { value: -91.7, label: labelRight },
-        -83.5,
-        553.3,
-        { value: -266.9, label: labelRight },
-        93.4,
-        { value: -202.8, label: labelRight },
-        550.1,
-        { value: -473, label: labelRight },
-        { value: -87.4, label: labelRight },
-        410.9
+        { value: -17.9, label: labelRight, itemStyle: { color: '#ff7f0e' } },
+        { value: -91.7, label: labelRight, itemStyle: { color: '#ff7f0e' } },
+        { value: -83.5, label: labelRight, itemStyle: { color: '#ff7f0e' } },
+        {value: 553.3, itemStyle: { color: '#1f77b4' }},
+        { value: -266.9, label: labelRight, itemStyle: { color: '#ff7f0e' } },
+        {value: 93.4, itemStyle: { color: '#1f77b4' }},
+        { value: -202.8, label: labelRight, itemStyle: { color: '#ff7f0e' } },
+        {value: 550.1, itemStyle: { color: '#1f77b4' }},
+        { value: -473, label: labelRight, itemStyle: { color: '#ff7f0e' } },
+        { value: -87.4, label: labelRight, itemStyle: { color: '#ff7f0e' } },
+        {value: 410.9, itemStyle: { color: '#1f77b4' }}
       ]
     }
   ]
